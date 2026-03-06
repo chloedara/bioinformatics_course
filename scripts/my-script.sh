@@ -1,8 +1,12 @@
 #!/usr/bin/env bash
+
+#!/usr/bin/env bash
+# make empty directories in your git repo
 mkdir -p analysis docs data
-touch ${analysis}/README.md
-echo "# ${analysis}" >> ${analysis}/README.md
-touch ${docs}/README.md
-echo "# ${docs}" >> ${docs}/README.md
-touch ${data}/README.md
-echo "# ${data}" >> ${data}/README.md
+
+# add a README.md to each directory
+# the scripts directory already exists
+for my_directory in scripts analysis docs data;do
+ touch ${my_directory}/README.md
+ echo "# ${my_directory}" >> ${my_directory}/README.md
+done
